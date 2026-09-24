@@ -1,15 +1,23 @@
 import { Feather } from "@expo/vector-icons";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
- 
-const historyItems = [];
- 
-const libraryItems =[];
- 
-export default function MainSection(){
+
+interface Video {
+  title: string;
+  channel: string;
+}
+
+const historyItems: Video[] = [
+  {
+    title: "Portal 3 - Official Trailer",
+    channel: "Valve",
+  },
+];
+
+const libraryItems: Video[] = [];
+
+export default function MainSection() {
   return (
     <View style={styles.container}>
-
-      
       <View style={styles.actionRow}>
         <Pressable style={styles.filledButton}>
           <Text style={styles.filledButtonText}>View channel</Text>
@@ -18,7 +26,6 @@ export default function MainSection(){
           <Text style={styles.text}>Upgrade to Premium</Text>
         </Pressable>
       </View>
-
 
       <View style={styles.sectionHeaderRow}>
         <Text style={styles.sectionTitle}>History</Text>
@@ -37,7 +44,7 @@ export default function MainSection(){
             <Text style={styles.cardTitle} numberOfLines={2}>
               {item.title}
             </Text>
-            <Text style={styles.cardSubtitle}>{item.subtitle}</Text>
+            <Text style={styles.cardSubtitle}>{item.channel}</Text>
           </View>
         ))}
       </ScrollView>
@@ -56,13 +63,12 @@ export default function MainSection(){
         </Pressable>
       </View>
 
-
       {libraryItems.map((item, i) => (
         <View key={i} style={styles.libraryRow}>
           <View style={styles.libraryThumbnail} />
           <View style={{ flex: 1 }}>
             <Text style={styles.text}>{item.title}</Text>
-            <Text style={styles.cardSubtitle}>{item.subtitle}</Text>
+            <Text style={styles.cardSubtitle}>{item.channel}</Text>
           </View>
           <Feather name="more-vertical" size={18} color="#aaaaaa" />
         </View>
@@ -71,38 +77,32 @@ export default function MainSection(){
   );
 }
 
-
 const styles = StyleSheet.create({
-  container: 
-  {
+  container: {
     width: "100%",
     marginTop: 24,
   },
 
-  actionRow: 
-  {
+  actionRow: {
     flexDirection: "row",
     gap: 12,
     marginBottom: 28,
   },
 
-  filledButton: 
-  {
+  filledButton: {
     backgroundColor: "#ffffff",
     borderRadius: 24,
     paddingVertical: 10,
     paddingHorizontal: 18,
   },
 
-  filledButtonText: 
-  {
+  filledButtonText: {
     color: "#0f0f0f",
     fontFamily: "Roboto",
     fontWeight: "600",
   },
 
-  outlinedButton: 
-  {
+  outlinedButton: {
     borderWidth: 1,
     borderColor: "#3f3f3f",
     borderRadius: 24,
@@ -110,41 +110,35 @@ const styles = StyleSheet.create({
     paddingHorizontal: 18,
   },
 
-  text: 
-  {
+  text: {
     color: "#ffffff",
     fontFamily: "Roboto",
     fontSize: 13,
   },
 
-  sectionHeaderRow: 
-  {
+  sectionHeaderRow: {
     flexDirection: "row",
     alignItems: "center",
     gap: 6,
     marginBottom: 12,
   },
 
-  sectionTitle: 
-  {
+  sectionTitle: {
     color: "#ffffff",
     fontFamily: "Roboto",
     fontSize: 20,
     fontWeight: "700",
   },
 
-  historyScroll: 
-  {
+  historyScroll: {
     marginBottom: 8,
   },
 
-  historyCard: 
-  {
+  historyCard: {
     width: 150,
   },
 
-  thumbnailPlaceholder: 
-  {
+  thumbnailPlaceholder: {
     width: 150,
     height: 84,
     borderRadius: 8,
@@ -152,31 +146,27 @@ const styles = StyleSheet.create({
     marginBottom: 6,
   },
 
-  cardTitle: 
-  {
+  cardTitle: {
     color: "#ffffff",
     fontFamily: "Roboto",
     fontSize: 13,
     fontWeight: "600",
   },
 
-  cardSubtitle: 
-  {
+  cardSubtitle: {
     color: "#bbbbbb",
     fontFamily: "Roboto",
     fontSize: 12,
     marginTop: 2,
   },
 
-  filterRow: 
-  {
+  filterRow: {
     flexDirection: "row",
     gap: 10,
     marginVertical: 14,
   },
 
-  pill: 
-  {
+  pill: {
     flexDirection: "row",
     alignItems: "center",
     gap: 4,
@@ -186,16 +176,14 @@ const styles = StyleSheet.create({
     paddingHorizontal: 12,
   },
 
-  libraryRow: 
-  {
+  libraryRow: {
     flexDirection: "row",
     alignItems: "center",
     gap: 14,
     paddingVertical: 10,
   },
 
-  libraryThumbnail: 
-  {
+  libraryThumbnail: {
     width: 100,
     height: 60,
     borderRadius: 6,
