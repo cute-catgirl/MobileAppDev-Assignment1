@@ -1,10 +1,12 @@
 import UserSection from "@/components/userSection";
+import MainSection from "@/components/mainSection";
 import { StyleSheet, View } from "react-native";
 
 export default function Index() {
   return (
     <View style={styles.container}>
       <UserSection />
+      <MainSection />
     </View>
   );
 }
