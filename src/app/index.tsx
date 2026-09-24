@@ -1,5 +1,9 @@
 import UserSection from "@/components/userSection";
+<<<<<<< HEAD
 import MainSection from "@/components/mainSection";
+=======
+import React from "react";
+>>>>>>> 4a352e48a65638b251dfe3cb8a822fc3c163d7df
 import { StyleSheet, View } from "react-native";
 
 export default function Index() {
