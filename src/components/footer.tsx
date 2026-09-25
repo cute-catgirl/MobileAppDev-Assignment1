@@ -6,11 +6,15 @@ export default function Footer() {
     <View style={[styles.footer]}>
       <View style={[styles.container]}>
         <Feather name="home" size={24} color="#ffffff"></Feather>
-        <Text style={[styles.text]}>Home</Text>
+        <Text style={[styles.text]} allowFontScaling={false}>
+          Home
+        </Text>
       </View>
       <View style={[styles.container]}>
         <Feather name="zap" size={24} color="#ffffff"></Feather>
-        <Text style={[styles.text]}>Shorts</Text>
+        <Text style={[styles.text]} allowFontScaling={false}>
+          Shorts
+        </Text>
       </View>
       <Pressable style={[styles.createButton]}>
         <Feather name="plus" size={24} color="#ffffff"></Feather>
@@ -18,7 +22,9 @@ export default function Footer() {
       {/* Make this the alert I guess */}
       <View style={[styles.container]}>
         <Feather name="youtube" size={24} color="#ffffff"></Feather>
-        <Text style={[styles.text]}>Subscriptions</Text>
+        <Text style={[styles.text]} allowFontScaling={false}>
+          Subscriptions
+        </Text>
       </View>
       <View style={[styles.container]}>
         <View style={[styles.profileFrame]}>
@@ -26,7 +32,9 @@ export default function Footer() {
             source={require("@/assets/images/pfp.jpg")}
             style={[styles.youIcon]}
           ></Image>
-          <Text style={[styles.text]}>You</Text>
+          <Text style={[styles.text]} allowFontScaling={false}>
+            You
+          </Text>
         </View>
       </View>
     </View>

@@ -20,10 +20,14 @@ export default function MainSection() {
     <View style={styles.container}>
       <View style={styles.actionRow}>
         <Pressable style={styles.filledButton}>
-          <Text style={styles.filledButtonText}>View channel</Text>
+          <Text style={styles.filledButtonText} maxFontSizeMultiplier={1.1}>
+            View channel
+          </Text>
         </Pressable>
         <Pressable style={styles.outlinedButton}>
-          <Text style={styles.text}>Upgrade to Premium</Text>
+          <Text style={styles.text} maxFontSizeMultiplier={1.1}>
+            Upgrade to Premium
+          </Text>
         </Pressable>
       </View>
 
@@ -90,10 +94,13 @@ const styles = StyleSheet.create({
   },
 
   filledButton: {
+    flex: 1,
+    flexDirection: "row",
     backgroundColor: "#ffffff",
     borderRadius: 24,
     paddingVertical: 10,
     paddingHorizontal: 18,
+    justifyContent: "center",
   },
 
   filledButtonText: {
@@ -103,11 +110,14 @@ const styles = StyleSheet.create({
   },
 
   outlinedButton: {
+    flex: 1,
+    flexDirection: "row",
     borderWidth: 1,
     borderColor: "#3f3f3f",
     borderRadius: 24,
     paddingVertical: 10,
     paddingHorizontal: 18,
+    justifyContent: "center",
   },
 
   text: {
