@@ -1,15 +1,20 @@
 import { Feather } from "@expo/vector-icons";
-import { Image, Pressable, StyleSheet, Text, View, Alert} from "react-native";
+import { Alert, Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
-function displayAlert(message) {
+function displayAlert(message: string) {
   Alert.alert(message);
 }
 
 export default function Footer() {
+  const insets = useSafeAreaInsets();
   return (
-    <View style={[styles.footer]}>
+    <View style={[styles.footer, { paddingBottom: insets.bottom }]}>
       <View style={[styles.buttonContainer]}>
-        <Pressable style={[styles.alertButton]} onPress={() => displayAlert('Simple Button pressed')}>
+        <Pressable
+          style={[styles.alertButton]}
+          onPress={() => displayAlert("Simple Button pressed")}
+        >
           <Text style={[styles.text, styles.alertButtonText]}>Alert</Text>
         </Pressable>
       </View>
@@ -94,7 +99,7 @@ const styles = StyleSheet.create({
   buttonContainer: {
     alignItems: "center",
     width: "100%",
-    height: 50
+    height: 50,
   },
   alertButton: {
     alignItems: "center",
@@ -105,6 +110,6 @@ const styles = StyleSheet.create({
     width: 100,
   },
   alertButtonText: {
-    fontSize: 20
-  }
+    fontSize: 20,
+  },
 });
