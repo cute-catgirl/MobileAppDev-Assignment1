@@ -1,9 +1,18 @@
 import { Feather } from "@expo/vector-icons";
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
+import { Image, Pressable, StyleSheet, Text, View, Alert} from "react-native";
+
+function displayAlert(message) {
+  Alert.alert(message);
+}
 
 export default function Footer() {
   return (
     <View style={[styles.footer]}>
+      <View style={[styles.buttonContainer]}>
+        <Pressable style={[styles.alertButton]} onPress={() => displayAlert('Simple Button pressed')}>
+          <Text style={[styles.text, styles.alertButtonText]}>Alert</Text>
+        </Pressable>
+      </View>
       <View style={[styles.container]}>
         <Feather name="home" size={24} color="#ffffff"></Feather>
         <Text style={[styles.text]} allowFontScaling={false}>
@@ -19,7 +28,6 @@ export default function Footer() {
       <Pressable style={[styles.createButton]}>
         <Feather name="plus" size={24} color="#ffffff"></Feather>
       </Pressable>
-      {/* Make this the alert I guess */}
       <View style={[styles.container]}>
         <Feather name="youtube" size={24} color="#ffffff"></Feather>
         <Text style={[styles.text]} allowFontScaling={false}>
@@ -46,6 +54,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignSelf: "flex-end",
     flexDirection: "row",
+    flexWrap: "wrap",
     alignItems: "center",
     justifyContent: "space-around",
     width: "100%",
@@ -82,4 +91,20 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: 56,
   },
+  buttonContainer: {
+    alignItems: "center",
+    width: "100%",
+    height: 50
+  },
+  alertButton: {
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 20,
+    backgroundColor: "#272727",
+    height: 40,
+    width: 100,
+  },
+  alertButtonText: {
+    fontSize: 20
+  }
 });
