@@ -9,8 +9,8 @@ export default function UserSection() {
         style={styles.profileImage}
       ></Image>
       <View style={[styles.vContainer, { justifyContent: "center", gap: 4 }]}>
-        <Text style={[styles.text, styles.displayName]}>Display Name</Text>
-        <Text style={[styles.text, styles.username]}>@username</Text>
+        <Text style={[styles.text, styles.displayName]}>Good Kitty</Text>
+        <Text style={[styles.text, styles.username]}>@EvilKitty</Text>
       </View>
     </View>
   );
