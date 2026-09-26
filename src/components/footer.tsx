@@ -13,7 +13,7 @@ export default function Footer() {
       <View style={[styles.buttonContainer]}>
         <Pressable
           style={[styles.alertButton]}
-          onPress={() => displayAlert("Simple Button pressed")}
+          onPress={() => displayAlert("Alert Button pressed")}
         >
           <Text style={[styles.text, styles.alertButtonText]}>Alert</Text>
         </Pressable>
