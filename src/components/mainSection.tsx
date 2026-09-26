@@ -54,6 +54,11 @@ const libraryItems: Video[] = [
     channel: "Private",
     thumbnail: require("@/assets/images/graphic-design-thumbnail.png"), // image made with MS paint
   },
+  {
+    title: "expo app devleopment tutorials",
+    channel: "Public • Playlist",
+    thumbnail: require("@/assets/images/thumb_expo.jpg"),
+  },
 ];
 
 export default function MainSection() {
@@ -131,6 +136,7 @@ export default function MainSection() {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     width: "100%",
     marginTop: 24,
   },
