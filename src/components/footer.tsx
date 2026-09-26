@@ -44,11 +44,12 @@ export default function Footer() {
           <Image
             source={require("@/assets/images/pfp.jpg")}
             style={[styles.youIcon]}
+            resizeMode="contain"
           ></Image>
-          <Text style={[styles.text]} allowFontScaling={false}>
-            You
-          </Text>
         </View>
+        <Text style={[styles.text]} allowFontScaling={false}>
+          You
+        </Text>
       </View>
     </View>
   );
