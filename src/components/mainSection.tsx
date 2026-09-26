@@ -35,7 +35,18 @@ const historyItems: Video[] = [
   },
 ];
 
-const libraryItems: Video[] = [];
+const libraryItems: Video[] = [
+  {
+    title: "Watch Later",
+    channel: "Private",
+    thumbnail: require("@/assets/images/how-to-play-snake-thumbnail.png") // image made with MS paint
+  },
+  {
+    title: "Liked Videos",
+    channel: "Private",
+    thumbnail: require("@/assets/images/graphic-design-thumbnail.png") // image made with MS paint
+  },
+];
 
 export default function MainSection() {
   return (
@@ -94,7 +105,11 @@ export default function MainSection() {
 
       {libraryItems.map((item, i) => (
         <View key={i} style={styles.libraryRow}>
-          <View style={styles.libraryThumbnail} />
+          <Image
+            source={item.thumbnail ?? undefined}
+            style={styles.libraryThumbnail}
+          />
+          {/* <View style={styles.libraryThumbnail} /> */}
           <View style={{ flex: 1 }}>
             <Text style={styles.text}>{item.title}</Text>
             <Text style={styles.cardSubtitle}>{item.channel}</Text>
