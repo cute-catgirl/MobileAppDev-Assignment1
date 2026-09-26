@@ -1,14 +1,16 @@
 import Footer from "@/components/footer";
 import MainSection from "@/components/mainSection";
 import UserSection from "@/components/userSection";
-import { StyleSheet, View } from "react-native";
+import { ScrollView, StyleSheet, View } from "react-native";
 
 export default function Index() {
   return (
     <View style={styles.container}>
-      <UserSection />
-      <MainSection />
-      <View style={{ flex: 1 }} />
+      <ScrollView>
+        <UserSection />
+        <MainSection />
+        {/* <View style={{ flex: 1 }} /> */}
+      </ScrollView>
       <Footer />
     </View>
   );
