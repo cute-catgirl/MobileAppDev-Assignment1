@@ -1,5 +1,13 @@
 import { Feather } from "@expo/vector-icons";
-import { Image, ImageSourcePropType, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  ImageSourcePropType,
+  Pressable,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+} from "react-native";
 
 interface Video {
   title: string;
@@ -11,7 +19,7 @@ const historyItems: Video[] = [
   {
     title: "Portal 3 - Official Trailer",
     channel: "Valve",
-    thumbnail: null,
+    thumbnail: require("@/assets/images/thumb_portal.jpeg"),
   },
   {
     title: "moistcritikal situation is insane",
@@ -39,12 +47,12 @@ const libraryItems: Video[] = [
   {
     title: "Watch Later",
     channel: "Private",
-    thumbnail: require("@/assets/images/how-to-play-snake-thumbnail.png") // image made with MS paint
+    thumbnail: require("@/assets/images/how-to-play-snake-thumbnail.png"), // image made with MS paint
   },
   {
     title: "Liked Videos",
     channel: "Private",
-    thumbnail: require("@/assets/images/graphic-design-thumbnail.png") // image made with MS paint
+    thumbnail: require("@/assets/images/graphic-design-thumbnail.png"), // image made with MS paint
   },
 ];
 
