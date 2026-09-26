@@ -1,15 +1,37 @@
 import { Feather } from "@expo/vector-icons";
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Image, ImageSourcePropType, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 
 interface Video {
   title: string;
   channel: string;
+  thumbnail: ImageSourcePropType | null;
 }
 
 const historyItems: Video[] = [
   {
     title: "Portal 3 - Official Trailer",
     channel: "Valve",
+    thumbnail: null,
+  },
+  {
+    title: "moistcritikal situation is insane",
+    channel: "penguinz0",
+    thumbnail: require("@/assets/images/thumb_moistcritikalcrazy.jpg"),
+  },
+  {
+    title: "Your craziest lion stories",
+    channel: "Matt Rose",
+    thumbnail: require("@/assets/images/thumb_crazylionstories.jpg"),
+  },
+  {
+    title: "Introducing the new iPhone Twist",
+    channel: "Apple",
+    thumbnail: require("@/assets/images/thumb_newiphone.jpg"),
+  },
+  {
+    title: "Kongrats Motivate Me",
+    channel: "Lessons in Meme Culture",
+    thumbnail: require("@/assets/images/thumb_limcrats.jpg"),
   },
 ];
 
@@ -44,7 +66,10 @@ export default function MainSection() {
       >
         {historyItems.map((item, i) => (
           <View key={i} style={styles.historyCard}>
-            <View style={styles.thumbnailPlaceholder} />
+            <Image
+              source={item.thumbnail ?? undefined}
+              style={styles.thumbnailPlaceholder}
+            />
             <Text style={styles.cardTitle} numberOfLines={2}>
               {item.title}
             </Text>
