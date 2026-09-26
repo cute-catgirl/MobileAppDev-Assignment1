@@ -59,6 +59,11 @@ const libraryItems: Video[] = [
     channel: "Public • Playlist",
     thumbnail: require("@/assets/images/thumb_expo.jpg"),
   },
+  {
+    title: "silly and whimsical wonders",
+    channel: "Private",
+    thumbnail: require("@/assets/images/thumb_spheres.png"),
+  },
 ];
 
 export default function MainSection() {
