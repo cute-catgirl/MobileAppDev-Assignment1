@@ -136,7 +136,6 @@ export default function MainSection() {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     width: "100%",
     marginTop: 24,
   },

@@ -57,7 +57,6 @@ export default function Footer() {
 
 const styles = StyleSheet.create({
   footer: {
-    flex: 1,
     alignSelf: "flex-end",
     flexDirection: "row",
     flexWrap: "wrap",
